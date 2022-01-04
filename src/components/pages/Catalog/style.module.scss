@@ -1,9 +1,0 @@
-@import "./../../../assets/styles/style.scss";
-
-.catalogPage {
-  display: flex;
-	min-height: calc(100vh - 10rem);
-  flex-direction: column;
-  align-items: center;
-  background-color: $rootBcg;
-}

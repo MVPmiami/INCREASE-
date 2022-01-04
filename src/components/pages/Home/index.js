@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./style.module.scss";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import img from "./../../../assets/img/mainPicture.webp";
+import Header from "./../../organisms/Header";
+import Main from "./../../organisms/Main";
+import Footer from "./../../organisms/Footer";
 
 const Home = () => {
   return (
-    <div className={styles.homePage} data-test-home-page="home-page">
-      <main>
-        <LazyLoadImage src={img} className={styles.img}></LazyLoadImage>
-      </main>
-    </div>
+    <>
+      <Header />
+			<Main />
+			<Footer/>
+    </>
   );
 };
 

@@ -2,15 +2,33 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 16px;
+  font-size: 14px;
   overflow-x: hidden;
-  scrollbar-color: #f1b926 #ffffff;
+  scrollbar-color: #777777 #ffffff;
   scrollbar-width: thin;
   ::-webkit-scrollbar {
     width: 0.5rem;
     background-color: #ffffff;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #f1b926;
+    background-color: #777777;
+  }
+}
+
+.container {
+  max-width: 59.9375rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 966px) {
+  .container {
+    max-width: 35rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 17rem;
   }
 }

@@ -1,27 +1,23 @@
 import React from "react";
 import styles from "./style.module.scss";
-import CatalogBtn from "./../../atoms/CatalogBtn";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router";
 
 const Header = () => {
-  let location = useLocation().pathname;
-	let isActiveBtn = false;
-  if (location === "/catalog") {
-    isActiveBtn = true;
-  } else {
-    isActiveBtn = false;
-  }
-
   return (
-    <header className={styles.headerWrapper}>
-      <Link to={"/"} className={styles.linkToCatalog}>
-        <div className={styles.logo}></div>
-      </Link>
-      <Link to={"/catalog"} className={styles.linkToCatalog}>
-        <CatalogBtn isActiveBtn={isActiveBtn} />
-      </Link>
-    </header>
+    <>
+      <header>
+        <div className={styles.container}>
+          <div className={styles.wrapper}>
+            <div className={styles.logo}></div>
+            <div className={styles.contacts}></div>
+            <div className={styles.more}>
+              <a href="tel: +375293711041">+375 (29) 371-10-41</a>
+              <a href="mailto: info@increase.by">info@increase.by</a>
+              <a href="https://increase.by/">www.increase.by</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
   );
 };
 

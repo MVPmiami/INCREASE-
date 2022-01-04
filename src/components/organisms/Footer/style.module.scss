@@ -1,0 +1,95 @@
+@import "./../../../assets/styles/style.scss";
+
+.wrapper {
+  @include block($textWhite, $textWhite);
+  margin: 1.5rem 0;
+  justify-content: space-between;
+  .leftSide {
+    @include block($backgroundDark, $textWhite);
+    justify-content: space-between;
+    padding: 1.5rem;
+    .list {
+      margin-right: 3rem;
+    }
+  }
+  .center {
+    @include block($backgroundDark, $textWhite);
+    padding: 1.5rem;
+    .list {
+      text-align: left;
+      list-style: square inside;
+      & li a {
+        text-decoration: none;
+        color: $textWhite;
+      }
+    }
+  }
+  .rightSide {
+    @include block($textWhite, $textWhite);
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 14rem;
+    & .block:nth-child(2) {
+      margin-top: 1.5rem;
+    }
+    .block {
+      @include block($backgroundDark, $textWhite);
+      min-height: 3rem;
+      width: 17.469rem;
+      max-width: 17.469rem;
+      padding: 1.5rem;
+      word-wrap: break-word;
+    }
+  }
+}
+
+@media (max-width: 966px) {
+  .wrapper {
+    .leftSide {
+      .list {
+        margin-right: 2rem;
+      }
+    }
+    .rightSide {
+      min-width: 100%;
+      margin-top: 1.5rem;
+      .block {
+        @include block($backgroundDark, $textWhite);
+        min-height: 5rem;
+        width: 32.469rem;
+        max-width: 32.469rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    @include block($textWhite, $textWhite);
+    margin: 1.5rem 0;
+    justify-content: flex-start;
+    .leftSide {
+      @include block($backgroundDark, $textWhite);
+      justify-content: space-between;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      .list {
+        margin-right: 2rem;
+      }
+    }
+    .rightSide {
+      @include block($textWhite, $textWhite);
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 17rem;
+      min-height: 11.7rem;
+      .block {
+        @include block($backgroundDark, $textWhite);
+        flex-wrap: nowrap;
+        min-height: 5rem;
+        max-width: 13.875rem;
+      }
+    }
+  }
+}

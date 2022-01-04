@@ -1,27 +1,17 @@
-$statusText: #51e245;
-$disableBTN: #a9a9a9;
-$activeBTN: #f2c140;
-$dataText: #2d2d2d;
-$statusBcg: #d6ffd2;
-$shadow: #0000000a;
-$errorText: rgb(240, 227, 227);
-$errorBcg: #9c1e1e;
-$CatalogBcgActive: #f1b926;
-$CatalogBcgDisable: #ffffff;
-$footer: white;
-$borderCard: #a9a9a9;
-$rootBcg: #fbfbfb;
-@mixin status($statusText, $statusBcg) {
-  color: $statusText;
-  background-color: $statusBcg;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
-  text-align: center;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.063rem;
-  font-variant: small-caps;
-}
+$backgroundLight: #dcdcdc;
+$backgroundDark: #777777;
+$textWhite: #ffffff;
+$textBlack: #000000;
 
-.container {
-  background-color: $rootBcg;
+@mixin block($bcgColor, $textColor) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: $textColor;
+  background-color: $bcgColor;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.57142857143rem;
 }

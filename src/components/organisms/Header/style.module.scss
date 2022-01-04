@@ -1,29 +1,91 @@
 @import "./../../../assets/styles/style.scss";
 
-.headerWrapper {
-  display: flex;
+.wrapper {
+  @include block($textWhite, $textWhite);
   justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  overflow-x: hidden;
-  padding: 0 7.5rem;
-  width: calc(100vw - 15rem);
-  background-color: $CatalogBcgDisable;
-  .logo {
-    background-image: url("./../../../assets/img/logo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 5rem;
-    height: 3rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 0.0625rem solid $backgroundDark;
+  .logo,
+  .contacts,
+  .more {
+    min-height: 6.75rem;
+    @include block($backgroundDark, $textWhite);
   }
-  .linkToCatalog {
-    text-decoration: none;
+  .logo {
+    width: 7.625rem;
+    height: 6.75rem;
+  }
+  .contacts {
+    width: 17.4375rem;
+    max-width: 17.4375rem;
+    @include block($backgroundDark, $textWhite);
+    flex-direction: column;
+    flex-wrap: nowrap;
+		word-wrap: break-word;
+  }
+  .more {
+    width: 30.0625rem;
+    max-width: 30.0625rem;
+    @include block($backgroundDark, $textWhite);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 2rem 0 0;
+    word-wrap: break-word;
+    & a:first-child {
+      text-decoration: none;
+    }
+    & a {
+			margin: 0.25rem;
+      color: $textWhite; 
+    }
+  }
+}
+@media (max-width: 966px) {
+  .wrapper {
+    flex-wrap: nowrap;
+    .logo {
+      min-width: 7.625rem;
+      margin-right: 1rem;
+    }
+    .contacts {
+      min-width: 9.4375rem;
+      margin-right: 1rem;
+    }
+    .more {
+      min-width: 15.063rem;
+      padding: 0 1rem 0 0;
+    }
   }
 }
 
-@media (max-width: 610px) {
-  .headerWrapper {
-    width: calc(100vw - 5rem);
-    padding: 0 2.5rem;
+@media (max-width: 600px) {
+  .wrapper {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: baseline;
+    .logo,
+    .contacts,
+    .more {
+      margin-bottom: 0.25rem;
+    }
+    .logo {
+      min-width: 7.625rem;
+      margin-right: 0;
+    }
+    .contacts {
+      min-width: 17rem;
+      margin-right: 0;
+      max-width: 17rem;
+    }
+    .more {
+      min-width: 17rem;
+      width: 17.063rem;
+      padding: 0;
+      & a {
+        padding-right: 1rem;
+      }
+    }
   }
 }

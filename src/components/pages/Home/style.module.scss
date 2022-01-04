@@ -1,17 +1,1 @@
 @import "./../../../assets/styles/style.scss";
-
-.homePage {
-  display: flex;
-  min-height: calc(100vh - 10rem);
-  flex-direction: column;
-  align-items: center;
-  background-color: $rootBcg;
-  main {
-    max-height: calc(100vh - 10rem);
-    width: 100vw;
-    .img {
-      width: 100vw;
-      height: calc(100vh - 11rem);
-    }
-  }
-}
